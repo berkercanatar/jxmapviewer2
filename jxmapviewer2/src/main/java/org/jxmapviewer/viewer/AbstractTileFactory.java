@@ -368,6 +368,7 @@ public abstract class AbstractTileFactory extends TileFactory
                 try
                 {
                     URI uri = getURI(tile);
+                    tile.setURI(uri);
                     BufferedImage img = cache.get(uri);
                     if (img == null)
                     {
