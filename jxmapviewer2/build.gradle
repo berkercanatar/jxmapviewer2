@@ -25,10 +25,6 @@ uploadArchives {
             project.hasProperty('sonatypePassword')) {
 
             mavenDeployer {
-                beforeDeployment { MavenDeployment deployment ->
-                    signing.signPom(deployment)
-                }
-
                 repository(url: sonatypeRepoURI) {
                     authentication(
                         userName: sonatypeUsername,
